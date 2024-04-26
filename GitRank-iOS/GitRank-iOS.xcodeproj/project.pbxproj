@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90E9BEB42BDB6BD900AD83AF /* GitRank_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E9BEB32BDB6BD900AD83AF /* GitRank_iOSApp.swift */; };
-		90E9BEB62BDB6BD900AD83AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E9BEB52BDB6BD900AD83AF /* ContentView.swift */; };
+		90E9BEB62BDB6BD900AD83AF /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E9BEB52BDB6BD900AD83AF /* SigninView.swift */; };
 		90E9BEB82BDB6BDB00AD83AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E9BEB72BDB6BDB00AD83AF /* Assets.xcassets */; };
 		90E9BEBB2BDB6BDB00AD83AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E9BEBA2BDB6BDB00AD83AF /* Preview Assets.xcassets */; };
 		90E9BEC32BDB6C5E00AD83AF /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E9BEC22BDB6C5E00AD83AF /* Domain.swift */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		90E9BEB02BDB6BD900AD83AF /* GitRank-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitRank-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E9BEB32BDB6BD900AD83AF /* GitRank_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRank_iOSApp.swift; sourceTree = "<group>"; };
-		90E9BEB52BDB6BD900AD83AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		90E9BEB52BDB6BD900AD83AF /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		90E9BEB72BDB6BDB00AD83AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90E9BEBA2BDB6BDB00AD83AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		90E9BEC22BDB6C5E00AD83AF /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
@@ -57,8 +57,8 @@
 		90E9BEB22BDB6BD900AD83AF /* GitRank-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				90E9BEC72BDB6CA300AD83AF /* Scenes */,
 				90E9BEB32BDB6BD900AD83AF /* GitRank_iOSApp.swift */,
-				90E9BEB52BDB6BD900AD83AF /* ContentView.swift */,
 				90E9BEB72BDB6BDB00AD83AF /* Assets.xcassets */,
 				90E9BEB92BDB6BDB00AD83AF /* Preview Content */,
 			);
@@ -87,6 +87,14 @@
 				90E9BEC52BDB6C6500AD83AF /* Data.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		90E9BEC72BDB6CA300AD83AF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				90E9BEB52BDB6BD900AD83AF /* SigninView.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90E9BEB62BDB6BD900AD83AF /* ContentView.swift in Sources */,
+				90E9BEB62BDB6BD900AD83AF /* SigninView.swift in Sources */,
 				90E9BEB42BDB6BD900AD83AF /* GitRank_iOSApp.swift in Sources */,
 				90E9BEC32BDB6C5E00AD83AF /* Domain.swift in Sources */,
 				90E9BEC62BDB6C6500AD83AF /* Data.swift in Sources */,
