@@ -11,6 +11,8 @@
 		90E9BEB62BDB6BD900AD83AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E9BEB52BDB6BD900AD83AF /* ContentView.swift */; };
 		90E9BEB82BDB6BDB00AD83AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E9BEB72BDB6BDB00AD83AF /* Assets.xcassets */; };
 		90E9BEBB2BDB6BDB00AD83AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E9BEBA2BDB6BDB00AD83AF /* Preview Assets.xcassets */; };
+		90E9BEC32BDB6C5E00AD83AF /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E9BEC22BDB6C5E00AD83AF /* Domain.swift */; };
+		90E9BEC62BDB6C6500AD83AF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E9BEC52BDB6C6500AD83AF /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		90E9BEB52BDB6BD900AD83AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		90E9BEB72BDB6BDB00AD83AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90E9BEBA2BDB6BDB00AD83AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90E9BEC22BDB6C5E00AD83AF /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		90E9BEC52BDB6C6500AD83AF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 		90E9BEA72BDB6BD900AD83AF = {
 			isa = PBXGroup;
 			children = (
+				90E9BEC42BDB6C6000AD83AF /* Data */,
+				90E9BEC12BDB6C5800AD83AF /* Domain */,
 				90E9BEB22BDB6BD900AD83AF /* GitRank-iOS */,
 				90E9BEB12BDB6BD900AD83AF /* Products */,
 			);
@@ -65,6 +71,22 @@
 				90E9BEBA2BDB6BDB00AD83AF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		90E9BEC12BDB6C5800AD83AF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				90E9BEC22BDB6C5E00AD83AF /* Domain.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		90E9BEC42BDB6C6000AD83AF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				90E9BEC52BDB6C6500AD83AF /* Data.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			files = (
 				90E9BEB62BDB6BD900AD83AF /* ContentView.swift in Sources */,
 				90E9BEB42BDB6BD900AD83AF /* GitRank_iOSApp.swift in Sources */,
+				90E9BEC32BDB6C5E00AD83AF /* Domain.swift in Sources */,
+				90E9BEC62BDB6C6500AD83AF /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
