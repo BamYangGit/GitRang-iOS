@@ -13,7 +13,6 @@ public struct AppState: DynamicProperty {
 
 public final class AppStateProvider: ObservableObject {
     @Published public var sceneFlow: SceneFlow
-    @Published public var rule: RuleExample
 
     public init(sceneFlow: SceneFlow) {
         self.sceneFlow = sceneFlow
