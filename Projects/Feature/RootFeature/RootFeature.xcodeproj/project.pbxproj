@@ -3,25 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0D4743394F8386FB83315537 /* libBaseFeature.a in Dependencies */ = {isa = PBXBuildFile; fileRef = F8500C85040FE8B461EE3E58 /* libBaseFeature.a */; };
 		19453D2903B71EA50622A489 /* OnboardingFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D264EAD5438B6AEC8E2BD693 /* OnboardingFeatureInterface.framework */; };
-		1AFB5C47E01D4D753EBF46A1 /* Sources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E4F0C90BB50DF2D0BB1D6 /* Sources.swift */; };
 		1D887197E3BFFA0084373075 /* RootFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9A61630C385F0EE4E42AB8 /* RootFeatureInterface.framework */; };
 		230D4CC733DE6706DBF7E19F /* libBaseFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8500C85040FE8B461EE3E58 /* libBaseFeature.a */; };
 		37D96EE852360168261560B1 /* libRootFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F6B002D219BC55BC8A7CE6 /* libRootFeature.a */; };
 		3D9F8CD7876ECA454F767699 /* RootFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9A61630C385F0EE4E42AB8 /* RootFeatureInterface.framework */; };
 		61A6F0C77A956AC44EF3F0AE /* GlobalThirdPartyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D84046AD213B9AF1F307B2 /* GlobalThirdPartyLibrary.framework */; };
 		7DA1D3F9A95553949BD6E3DE /* RootFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0336A88DBCD00FD2DCB64B6 /* RootFeatureTest.swift */; };
+		904C90EC2C037C2100057DB0 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C90E92C037C2100057DB0 /* RootComponent.swift */; };
+		904C90ED2C037C2100057DB0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C90EA2C037C2100057DB0 /* RootView.swift */; };
+		904C90F02C037C5E00057DB0 /* RootFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C90EF2C037C5E00057DB0 /* RootFactory.swift */; };
 		B7DF517A298D4149965E2874 /* SplashFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9025103505C5E2BE5DBC6C /* SplashFeatureInterface.framework */; };
 		BA21092423654C0FD25FEF25 /* MainFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9627378B6E1906C09CCA90 /* MainFeatureInterface.framework */; };
 		BDE8616D0EE53488CA015DEA /* MainFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9627378B6E1906C09CCA90 /* MainFeatureInterface.framework */; };
 		E4682B4B20A139AB001D256F /* SplashFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9025103505C5E2BE5DBC6C /* SplashFeatureInterface.framework */; };
 		EC2DC7FF051AAE8123E9CF0E /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E636C2DE3CE7BFEA245BCC4 /* DesignSystem.framework */; };
-		F3F82FB16B24ABF6C66F917C /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6262665E3F6B4DE84288EF3 /* Interface.swift */; };
 		F487DD32829FF5A25539C622 /* OnboardingFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D264EAD5438B6AEC8E2BD693 /* OnboardingFeatureInterface.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,13 +90,14 @@
 		00F6B002D219BC55BC8A7CE6 /* libRootFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRootFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9A61630C385F0EE4E42AB8 /* RootFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RootFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9627378B6E1906C09CCA90 /* MainFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MainFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		354E4F0C90BB50DF2D0BB1D6 /* Sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources.swift; sourceTree = "<group>"; };
 		36EB6645EFA059FB10246872 /* RootFeatureInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RootFeatureInterface-Info.plist"; sourceTree = "<group>"; };
 		4E636C2DE3CE7BFEA245BCC4 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		904C90E92C037C2100057DB0 /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
+		904C90EA2C037C2100057DB0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		904C90EF2C037C5E00057DB0 /* RootFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFactory.swift; sourceTree = "<group>"; };
 		9A9025103505C5E2BE5DBC6C /* SplashFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SplashFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CFEA1F596677AE2E0077CD /* RootFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RootFeatureTests-Info.plist"; sourceTree = "<group>"; };
 		A5D84046AD213B9AF1F307B2 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6262665E3F6B4DE84288EF3 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 		C48618B5E4CEE76FFB782DC2 /* RootFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RootFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0336A88DBCD00FD2DCB64B6 /* RootFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeatureTest.swift; sourceTree = "<group>"; };
 		D264EAD5438B6AEC8E2BD693 /* OnboardingFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +145,7 @@
 		1BD7EE559B087E3DB350AFA7 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				A6262665E3F6B4DE84288EF3 /* Interface.swift */,
+				904C90EF2C037C5E00057DB0 /* RootFactory.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -196,7 +198,8 @@
 		A4DA8866E1F6DE16B776E201 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				354E4F0C90BB50DF2D0BB1D6 /* Sources.swift */,
+				904C90E92C037C2100057DB0 /* RootComponent.swift */,
+				904C90EA2C037C2100057DB0 /* RootView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -305,8 +308,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				ORGANIZATIONNAME = BamyangGit;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 2B439DE758E0CDAD86F3302A /* Build configuration list for PBXProject "RootFeature" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -414,7 +415,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AFB5C47E01D4D753EBF46A1 /* Sources.swift in Sources */,
+				904C90ED2C037C2100057DB0 /* RootView.swift in Sources */,
+				904C90EC2C037C2100057DB0 /* RootComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F82FB16B24ABF6C66F917C /* Interface.swift in Sources */,
+				904C90F02C037C5E00057DB0 /* RootFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F33FADDE64ECFCB6D81AB626 /* Shared.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Derived/InfoPlists/RootFeatureTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -497,7 +500,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BamyangGit.RootFeatureInterface;
 				PRODUCT_NAME = RootFeatureInterface;
 				SDKROOT = iphoneos;
@@ -533,7 +539,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BamyangGit.RootFeatureInterface;
 				PRODUCT_NAME = RootFeatureInterface;
 				SDKROOT = iphoneos;
@@ -580,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F33FADDE64ECFCB6D81AB626 /* Shared.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Derived/InfoPlists/RootFeatureTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -606,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F33FADDE64ECFCB6D81AB626 /* Shared.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Derived/InfoPlists/RootFeatureTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -671,7 +682,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BamyangGit.RootFeatureInterface;
 				PRODUCT_NAME = RootFeatureInterface;
 				SDKROOT = iphoneos;
