@@ -92,3 +92,5 @@ iOSInjectionProject/
 .DS_Store
 
 GitRank-iOS.xcworkspace/xcshareddata/xcschemes/GitRank-iOS-Workspace.xcscheme
+
+*.pbxproj
