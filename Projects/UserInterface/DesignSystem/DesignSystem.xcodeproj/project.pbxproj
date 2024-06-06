@@ -3,14 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		010C04BCD3D30D19D8B65240 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F96042A1DE7785CB726321 /* AppDelegate.swift */; };
-		5958487404D49195E0920940 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB476509AA63AFAF40202426 /* Feature.swift */; };
+		094914A9552E49230A6E3283 /* GitRankFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AF15F0789EA88657956EE2 /* GitRankFont.swift */; };
+		09663056670DA0C8BABAB5EE /* GrayScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36630E8736D8766368D2A3ED /* GrayScale.swift */; };
+		120E4FD6F731DECF008B29E5 /* GitRankFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F9CB735F07B445E5CA67A /* GitRankFontStyle.swift */; };
+		2C2A6F1B0843699ACFE53D23 /* TuistFonts+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1489E7809DA4DADA471C2CDC /* TuistFonts+DesignSystem.swift */; };
+		313FB8E862B2BF5242789879 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25C1C589AF4FC204EF5E571 /* Images.xcassets */; };
 		83C981D4D8F860EE0B12BC1A /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B7BBEAD5472C7195924AC8 /* DesignSystem.framework */; };
+		ABB14811E13F7B1ECCF8B086 /* TuistAssets+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5263BC75B281154AC0B5A7B /* TuistAssets+DesignSystem.swift */; };
+		D0A152945AC72B45E6BDB32D /* GrayScale.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA00EA2688186036C20893B7 /* GrayScale.xcassets */; };
 		E0BEAFCFB5E41320394BB45E /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B7BBEAD5472C7195924AC8 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6018B5F7748E322214C52D6 /* TuistBundle+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AD9735556ECA8C8008FEC /* TuistBundle+DesignSystem.swift */; };
+		F75DE7671F28DA597E4776C6 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C3EF56EE58728F4397BB9DA8 /* Pretendard-Bold.otf */; };
+		FA1744DC5CD5C5B8BA40CFCE /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AA55D588F935C169F38702AA /* Pretendard-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,12 +58,21 @@
 
 /* Begin PBXFileReference section */
 		1186929FCA52DABD4E4D0A18 /* DesignSystemDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DesignSystemDemo-Info.plist"; sourceTree = "<group>"; };
+		1489E7809DA4DADA471C2CDC /* TuistFonts+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+DesignSystem.swift"; sourceTree = "<group>"; };
+		36630E8736D8766368D2A3ED /* GrayScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayScale.swift; sourceTree = "<group>"; };
 		69B7BBEAD5472C7195924AC8 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84580B50FFB779BA3168B5A4 /* DesignSystemDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignSystemDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8937FA9427EEA938B58C5B3E /* DesignSystem-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DesignSystem-Info.plist"; sourceTree = "<group>"; };
+		9D4F9CB735F07B445E5CA67A /* GitRankFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRankFontStyle.swift; sourceTree = "<group>"; };
+		A5263BC75B281154AC0B5A7B /* TuistAssets+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+DesignSystem.swift"; sourceTree = "<group>"; };
+		AA55D588F935C169F38702AA /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		B28C9C78E18589B2E94EDEB9 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		B9F96042A1DE7785CB726321 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB476509AA63AFAF40202426 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		BE4AD9735556ECA8C8008FEC /* TuistBundle+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+DesignSystem.swift"; sourceTree = "<group>"; };
+		C3EF56EE58728F4397BB9DA8 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		D25C1C589AF4FC204EF5E571 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA00EA2688186036C20893B7 /* GrayScale.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GrayScale.xcassets; sourceTree = "<group>"; };
+		F2AF15F0789EA88657956EE2 /* GitRankFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRankFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +97,8 @@
 		0E1288659896D0CFF98DA5AA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EB476509AA63AFAF40202426 /* Feature.swift */,
+				DF77BAA32D124DEFE2AC4639 /* Colors */,
+				3685E88874D8B1F3BEE6A129 /* Typography */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -93,15 +112,41 @@
 			path = ../../../XCConfig;
 			sourceTree = "<group>";
 		};
+		1AC66E6767016E7C72081D81 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EFB068E26AA8CB834A0F1063 /* Pretendard */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2BB59E843B58BD9FFF395FEA /* Project */ = {
 			isa = PBXGroup;
 			children = (
 				F7475433CC63995A20B82710 /* Demo */,
 				8753C5EB21B15584438290E8 /* Derived */,
+				9C29548CCBEAF62FB7951500 /* Resources */,
 				0E1288659896D0CFF98DA5AA /* Sources */,
 				191A630E1AD9933D6084DE5E /* XCConfig */,
 			);
 			name = Project;
+			sourceTree = "<group>";
+		};
+		3685E88874D8B1F3BEE6A129 /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				F2AF15F0789EA88657956EE2 /* GitRankFont.swift */,
+				9D4F9CB735F07B445E5CA67A /* GitRankFontStyle.swift */,
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		464C046F1FA6DE83CF911453 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D25C1C589AF4FC204EF5E571 /* Images.xcassets */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		82664F67710540CBDEBE5B11 /* Products */ = {
@@ -117,8 +162,37 @@
 			isa = PBXGroup;
 			children = (
 				F2F0D6EECE384EBEC3AFDEB4 /* InfoPlists */,
+				D5FD3537E28AE857DC09D214 /* Sources */,
 			);
 			path = Derived;
+			sourceTree = "<group>";
+		};
+		908BC3DC2C1190EB0044F6C8 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				EA00EA2688186036C20893B7 /* GrayScale.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		9C29548CCBEAF62FB7951500 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				908BC3DC2C1190EB0044F6C8 /* Colors */,
+				1AC66E6767016E7C72081D81 /* Fonts */,
+				464C046F1FA6DE83CF911453 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D5FD3537E28AE857DC09D214 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A5263BC75B281154AC0B5A7B /* TuistAssets+DesignSystem.swift */,
+				BE4AD9735556ECA8C8008FEC /* TuistBundle+DesignSystem.swift */,
+				1489E7809DA4DADA471C2CDC /* TuistFonts+DesignSystem.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		D6DC7809130D1B67ECE2B4B2 /* Compiled */ = {
@@ -128,6 +202,14 @@
 			name = Compiled;
 			sourceTree = "<group>";
 		};
+		DF77BAA32D124DEFE2AC4639 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				36630E8736D8766368D2A3ED /* GrayScale.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		EC9821EEC8CC800276475F6C = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +217,15 @@
 				D6DC7809130D1B67ECE2B4B2 /* Compiled */,
 				82664F67710540CBDEBE5B11 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		EFB068E26AA8CB834A0F1063 /* Pretendard */ = {
+			isa = PBXGroup;
+			children = (
+				C3EF56EE58728F4397BB9DA8 /* Pretendard-Bold.otf */,
+				AA55D588F935C169F38702AA /* Pretendard-Medium.otf */,
+			);
+			path = Pretendard;
 			sourceTree = "<group>";
 		};
 		F2F0D6EECE384EBEC3AFDEB4 /* InfoPlists */ = {
@@ -212,8 +303,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				ORGANIZATIONNAME = BamyangGit;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 5C0CBBA2BFE0CEE21375AF0A /* Build configuration list for PBXProject "DesignSystem" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -239,6 +328,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75DE7671F28DA597E4776C6 /* Pretendard-Bold.otf in Resources */,
+				FA1744DC5CD5C5B8BA40CFCE /* Pretendard-Medium.otf in Resources */,
+				D0A152945AC72B45E6BDB32D /* GrayScale.xcassets in Resources */,
+				313FB8E862B2BF5242789879 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +396,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5958487404D49195E0920940 /* Feature.swift in Sources */,
+				ABB14811E13F7B1ECCF8B086 /* TuistAssets+DesignSystem.swift in Sources */,
+				F6018B5F7748E322214C52D6 /* TuistBundle+DesignSystem.swift in Sources */,
+				2C2A6F1B0843699ACFE53D23 /* TuistFonts+DesignSystem.swift in Sources */,
+				09663056670DA0C8BABAB5EE /* GrayScale.swift in Sources */,
+				094914A9552E49230A6E3283 /* GitRankFont.swift in Sources */,
+				120E4FD6F731DECF008B29E5 /* GitRankFontStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +435,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BamyangGit.DesignSystem;
 				PRODUCT_NAME = DesignSystem;
 				SDKROOT = iphoneos;
@@ -520,7 +621,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BamyangGit.DesignSystem;
 				PRODUCT_NAME = DesignSystem;
 				SDKROOT = iphoneos;
@@ -583,7 +687,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BamyangGit.DesignSystem;
 				PRODUCT_NAME = DesignSystem;
 				SDKROOT = iphoneos;
