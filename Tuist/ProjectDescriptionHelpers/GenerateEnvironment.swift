@@ -12,6 +12,15 @@ let environment = ProcessInfo.processInfo.environment["TUIST_ENV"] ?? ""
 public let generateEnvironment = GenerateEnvironment(rawValue: environment) ?? .dev
 
 public extension GenerateEnvironment {
+    var appScripts: [TargetScript] {
+        switch self {
+        case .ci, .cd:
+            return [.needle]
+
+        case .dev:
+            return [.needle]
+        }
+    }
     var scripts: [TargetScript] {
         switch self {
         case .ci, .cd:
