@@ -33,6 +33,7 @@ public enum DesignSystemAsset {
   public static let github = DesignSystemImages(name: "Github")
     public static let logo = DesignSystemImages(name: "Logo")
     public static let navigationLogo = DesignSystemImages(name: "NavigationLogo")
+    public static let xmark = DesignSystemImages(name: "Xmark")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

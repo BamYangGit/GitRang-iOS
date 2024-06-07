@@ -5,6 +5,7 @@ public struct GitRankImage: View {
         case logo
         case navigationLogo
         case github
+        case xmark
     }
 
     private var image: Image
@@ -31,8 +32,12 @@ public struct GitRankImage: View {
 
         case .navigationLogo:
             DesignSystemAsset.Images.navigationLogo.swiftUIImage
+
         case .github:
             DesignSystemAsset.Images.github.swiftUIImage
+
+        case .xmark:
+            DesignSystemAsset.Images.xmark.swiftUIImage
         }
     }
 }
