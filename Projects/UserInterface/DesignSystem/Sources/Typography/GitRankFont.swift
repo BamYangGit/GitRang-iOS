@@ -12,8 +12,8 @@ public struct GitRankFont: ViewModifier {
     public func body(content: Content) -> some View {
         content
             .font(style.weight.swiftUIFont(size: style.size))
-            .lineSpacing(lineHeight * style.lineHeight - lineHeight)
-            .padding(.vertical, (lineHeight * style.lineHeight - lineHeight) / 4)
+            .lineSpacing(style.lineHeight - lineHeight)
+            .padding(.vertical, (style.lineHeight - lineHeight) / 4)
     }
 }
 

@@ -13,9 +13,10 @@
 		120E4FD6F731DECF008B29E5 /* GitRankFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F9CB735F07B445E5CA67A /* GitRankFontStyle.swift */; };
 		2C2A6F1B0843699ACFE53D23 /* TuistFonts+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1489E7809DA4DADA471C2CDC /* TuistFonts+DesignSystem.swift */; };
 		313FB8E862B2BF5242789879 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25C1C589AF4FC204EF5E571 /* Images.xcassets */; };
+		538680E7C087367717213FB2 /* GitRankImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F63B474122F6FA046EDD8 /* GitRankImage.swift */; };
+		7DD70D83FD48A0198B88A8DA /* GrayScale.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E6C1C3190B6CACDC5D52EF2 /* GrayScale.xcassets */; };
 		83C981D4D8F860EE0B12BC1A /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B7BBEAD5472C7195924AC8 /* DesignSystem.framework */; };
 		ABB14811E13F7B1ECCF8B086 /* TuistAssets+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5263BC75B281154AC0B5A7B /* TuistAssets+DesignSystem.swift */; };
-		D0A152945AC72B45E6BDB32D /* GrayScale.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA00EA2688186036C20893B7 /* GrayScale.xcassets */; };
 		E0BEAFCFB5E41320394BB45E /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B7BBEAD5472C7195924AC8 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6018B5F7748E322214C52D6 /* TuistBundle+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AD9735556ECA8C8008FEC /* TuistBundle+DesignSystem.swift */; };
 		F75DE7671F28DA597E4776C6 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C3EF56EE58728F4397BB9DA8 /* Pretendard-Bold.otf */; };
@@ -61,6 +62,7 @@
 		1489E7809DA4DADA471C2CDC /* TuistFonts+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+DesignSystem.swift"; sourceTree = "<group>"; };
 		36630E8736D8766368D2A3ED /* GrayScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayScale.swift; sourceTree = "<group>"; };
 		69B7BBEAD5472C7195924AC8 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E6C1C3190B6CACDC5D52EF2 /* GrayScale.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GrayScale.xcassets; sourceTree = "<group>"; };
 		84580B50FFB779BA3168B5A4 /* DesignSystemDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignSystemDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8937FA9427EEA938B58C5B3E /* DesignSystem-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DesignSystem-Info.plist"; sourceTree = "<group>"; };
 		9D4F9CB735F07B445E5CA67A /* GitRankFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRankFontStyle.swift; sourceTree = "<group>"; };
@@ -71,7 +73,7 @@
 		BE4AD9735556ECA8C8008FEC /* TuistBundle+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+DesignSystem.swift"; sourceTree = "<group>"; };
 		C3EF56EE58728F4397BB9DA8 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		D25C1C589AF4FC204EF5E571 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EA00EA2688186036C20893B7 /* GrayScale.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GrayScale.xcassets; sourceTree = "<group>"; };
+		E86F63B474122F6FA046EDD8 /* GitRankImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRankImage.swift; sourceTree = "<group>"; };
 		F2AF15F0789EA88657956EE2 /* GitRankFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRankFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,9 +100,18 @@
 			isa = PBXGroup;
 			children = (
 				DF77BAA32D124DEFE2AC4639 /* Colors */,
+				0E4C5D7B0E5C6D9D917D41E9 /* Images */,
 				3685E88874D8B1F3BEE6A129 /* Typography */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		0E4C5D7B0E5C6D9D917D41E9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E86F63B474122F6FA046EDD8 /* GitRankImage.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		191A630E1AD9933D6084DE5E /* XCConfig */ = {
@@ -149,6 +160,14 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		7A598F64DE446EA65E8B61CE /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				6E6C1C3190B6CACDC5D52EF2 /* GrayScale.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		82664F67710540CBDEBE5B11 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,18 +186,10 @@
 			path = Derived;
 			sourceTree = "<group>";
 		};
-		908BC3DC2C1190EB0044F6C8 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				EA00EA2688186036C20893B7 /* GrayScale.xcassets */,
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
 		9C29548CCBEAF62FB7951500 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				908BC3DC2C1190EB0044F6C8 /* Colors */,
+				7A598F64DE446EA65E8B61CE /* Colors */,
 				1AC66E6767016E7C72081D81 /* Fonts */,
 				464C046F1FA6DE83CF911453 /* Images */,
 			);
@@ -328,9 +339,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD70D83FD48A0198B88A8DA /* GrayScale.xcassets in Resources */,
 				F75DE7671F28DA597E4776C6 /* Pretendard-Bold.otf in Resources */,
 				FA1744DC5CD5C5B8BA40CFCE /* Pretendard-Medium.otf in Resources */,
-				D0A152945AC72B45E6BDB32D /* GrayScale.xcassets in Resources */,
 				313FB8E862B2BF5242789879 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +358,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		3C1B6390668A8E92468868F0 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -365,6 +377,7 @@
 		};
 		A34E196D6FA16859DB7CDDE9 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -400,6 +413,7 @@
 				F6018B5F7748E322214C52D6 /* TuistBundle+DesignSystem.swift in Sources */,
 				2C2A6F1B0843699ACFE53D23 /* TuistFonts+DesignSystem.swift in Sources */,
 				09663056670DA0C8BABAB5EE /* GrayScale.swift in Sources */,
+				538680E7C087367717213FB2 /* GitRankImage.swift in Sources */,
 				094914A9552E49230A6E3283 /* GitRankFont.swift in Sources */,
 				120E4FD6F731DECF008B29E5 /* GitRankFontStyle.swift in Sources */,
 			);
