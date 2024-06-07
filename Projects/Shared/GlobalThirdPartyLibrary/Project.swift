@@ -8,7 +8,8 @@ let project = Project.module(
         .implements(module: .shared(.GlobalThirdPartyLibrary), product: .framework, dependencies: [
             .SPM.CombineMoya,
             .SPM.Moya,
-            .SPM.Needle
+            .SPM.Needle,
+            .SPM.ContributionChart
         ])
     ]
 )

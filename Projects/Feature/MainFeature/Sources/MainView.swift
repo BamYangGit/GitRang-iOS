@@ -1,14 +1,22 @@
 import DesignSystem
 import SwiftUI
 import BaseFeature
+import ContributionChart
 
 struct MainView: View {
     @StateObject var viewModel: MainViewModel
+
+    var data: [Double]
+    let rows = 7
+    let columns: Int
 
     init(
         viewModel: MainViewModel
     ) {
         _viewModel = StateObject(wrappedValue: viewModel)
+        // swiftlint: disable line_length
+        data = [0.3, 0.4, 0.4, 0.4, 0.1, 0.5, 0.0, 0.1, 0.0, 0.2, 0.2, 0.2, 0.0, 0.2, 0.2, 0.5, 0.4, 0.2, 0.4, 0.5, 0.2, 0.2, 0.4, 0.3, 0.3, 0.2, 0.4, 0.0, 0.0, 0.5, 0.4, 0.3, 0.5, 0.3, 0.0, 0.0, 0.1, 0.0, 0.2, 0.3, 0.0, 0.0, 0.0, 0.5, 0.3, 0.3, 0.0, 0.3, 0.0, 0.5, 0.3, 0.3, 0.4, 0.5, 0.5, 0.3, 0.4, 0.1, 0.4, 0.2, 0.5, 0.1, 0.4, 0.2, 0.5, 0.4, 0.3, 0.5, 0.0, 0.4, 0.3, 0.2, 0.1, 0.5, 0.2, 0.0, 0.2, 0.5, 0.5, 0.3, 0.4, 0.0, 0.3, 0.3, 0.1, 0.2, 0.5, 0.2, 0.1, 0.4, 0.4, 0.0, 0.5, 0.3, 0.3, 0.5, 0.0, 0.2]
+        self.columns = data.count / rows
     }
 
     var body: some View {
@@ -29,7 +37,7 @@ struct MainView: View {
                     .frame(width: 80, height: 80)
 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("gtw030488@gmail.com")
+                    Text(verbatim: "gtw030488@gmail.com")
                         .gitRankFont(.description, color: .GrayScale.gray700)
 
                     VStack(alignment: .leading, spacing: 0) {
@@ -55,6 +63,20 @@ struct MainView: View {
             commitGoalBox(currentCommit: 4, commitGoal: 10)
                 .padding(.vertical, 8)
                 .padding(.horizontal, 21)
+
+            ContributionChartView(
+                data: data,
+                rows: rows,
+                columns: columns,
+                targetValue: data.max() ?? 0,
+                blockColor: .green,
+                blockBackgroundColor: .gray.opacity(0.2)
+            )
+            .frame(height: 158)
+            .padding(10)
+            .withBorder(cornerRadius: 8, borderColor: .GrayScale.gray400)
+            .padding(.vertical, 8)
+            .padding(.horizontal, 21)
 
             Spacer()
         }
