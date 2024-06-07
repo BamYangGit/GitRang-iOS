@@ -13,7 +13,7 @@ let settings: Settings = .settings(
     defaultSettings: .recommended
 )
 
-let scripts: [TargetScript] = generateEnvironment.scripts
+let scripts: [TargetScript] = generateEnvironment.appScripts
 
 let targets: [Target] = [
     .init(
@@ -30,7 +30,8 @@ let targets: [Target] = [
             .feature(target: .RootFeature),
             .feature(target: .MainFeature),
             .feature(target: .SplashFeature),
-            .feature(target: .OnboardingFeature)
+            .feature(target: .OnboardingFeature),
+            .feature(target: .TabFeature)
         ],
         settings: .settings(base: env.baseSetting)
     )
