@@ -4,24 +4,39 @@ import DesignSystem
 import SplashFeatureInterface
 import OnboardingFeatureInterface
 import MainFeatureInterface
+import TabFeatureInterface
 
 struct RootView: View {
     @AppState var appState
+
+    private let onboardingFactory: any OnboardingFactory
+    private let splashFactory: any SplashFactory
+    private let tabFactory: any TabFactory
+
+    public init(
+        onboardingFactory: any OnboardingFactory,
+        splashFactory: any SplashFactory,
+        tabFactory: any TabFactory
+    ) {
+        self.onboardingFactory = onboardingFactory
+        self.splashFactory = splashFactory
+        self.tabFactory = tabFactory
+    }
 
     var body: some View {
         NavigationView {
             ZStack {
                 switch appState.sceneFlow {
-                case .auth:
-                    EmptyView()
+                case .onboarding:
+                    onboardingFactory.makeView().eraseToAnyView()
                         .environmentObject(appState)
 
                 case .main:
-                    EmptyView()
+                    tabFactory.makeView().eraseToAnyView()
                         .environmentObject(appState)
 
                 case .splash:
-                    EmptyView()
+                    splashFactory.makeView().eraseToAnyView()
                         .environmentObject(appState)
                 }
             }

@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		137CC25BE8C9FEE382A3C96C /* Sources.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFACB3AF4CBEC15B95FB6827 /* Sources.swift */; };
 		15341C8FCC57F7CED46B6DF9 /* libBaseFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5134A0F8A03274DCE2F3481A /* libBaseFeature.a */; };
 		28A56FAEE19ECBAE0A3124AE /* OnboardingFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C128B908728486815FF1D7D /* OnboardingFeatureTest.swift */; };
-		3C8B404CAF22EE261174908D /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C054CA33364E7127A523A4F /* Interface.swift */; };
 		42DEB6A6D1624731F75E1E1B /* OnboardingFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49700A1EB5CDEF84F54A296C /* OnboardingFeatureInterface.framework */; };
 		47DADD4ADA74BC1336C6F095 /* libBaseFeature.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 5134A0F8A03274DCE2F3481A /* libBaseFeature.a */; };
+		5DD30657346860FD2470AE10 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8CE44B5AE4058D034C58C4 /* OnboardingView.swift */; };
 		7966FF8E9955BA41E4C624A8 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E7D1026F4CEAE962CBBB01 /* DesignSystem.framework */; };
+		81D768F0E0759605A8B4184C /* OnboardingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9B72D7CD5B2BFF8D2626E /* OnboardingFactory.swift */; };
 		9827E9E3E13DF450F0F44C09 /* GlobalThirdPartyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DF53D509BC31654CD7F266 /* GlobalThirdPartyLibrary.framework */; };
+		A6307DF4B79E38B47720F78A /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423BAED1AE5612CD9ADE5E07 /* OnboardingViewModel.swift */; };
+		B36D7879428BD713F5B1BBE6 /* OnboardingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DFAF8551D31DC3A73E2774 /* OnboardingComponent.swift */; };
 		CBB66CB81D3CB783194A2943 /* OnboardingFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49700A1EB5CDEF84F54A296C /* OnboardingFeatureInterface.framework */; };
 		E6CDF972B41031DDE69B3157 /* libOnboardingFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F91BC389C331264001A8DC /* libOnboardingFeature.a */; };
 /* End PBXBuildFile section */
@@ -80,17 +82,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0C054CA33364E7127A523A4F /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		14DFAF8551D31DC3A73E2774 /* OnboardingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingComponent.swift; sourceTree = "<group>"; };
 		4062EEDCBEFFD4918BB95258 /* OnboardingFeatureInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureInterface-Info.plist"; sourceTree = "<group>"; };
+		423BAED1AE5612CD9ADE5E07 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		49700A1EB5CDEF84F54A296C /* OnboardingFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB7380A01FC4B2DA9E5D868 /* OnboardingFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureTests-Info.plist"; sourceTree = "<group>"; };
 		50F91BC389C331264001A8DC /* libOnboardingFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5134A0F8A03274DCE2F3481A /* libBaseFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E7D1026F4CEAE962CBBB01 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF9B72D7CD5B2BFF8D2626E /* OnboardingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFactory.swift; sourceTree = "<group>"; };
 		7C128B908728486815FF1D7D /* OnboardingFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFeatureTest.swift; sourceTree = "<group>"; };
 		995B12515EDDC23E4CA7E664 /* OnboardingFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DF53D509BC31654CD7F266 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFACB3AF4CBEC15B95FB6827 /* Sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources.swift; sourceTree = "<group>"; };
+		AC8CE44B5AE4058D034C58C4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FA588A7BB01EB7CCF95B60A7 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,7 +157,7 @@
 		63BAE3C92A15CB2548815FB2 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				0C054CA33364E7127A523A4F /* Interface.swift */,
+				6AF9B72D7CD5B2BFF8D2626E /* OnboardingFactory.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -161,7 +165,9 @@
 		87F593C03D1911D2F2934795 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DFACB3AF4CBEC15B95FB6827 /* Sources.swift */,
+				14DFAF8551D31DC3A73E2774 /* OnboardingComponent.swift */,
+				AC8CE44B5AE4058D034C58C4 /* OnboardingView.swift */,
+				423BAED1AE5612CD9ADE5E07 /* OnboardingViewModel.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		80581C30EE6C81A708D26F78 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -355,6 +362,7 @@
 		};
 		AFABE9B3EAFB2BC6921E1371 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -373,6 +381,7 @@
 		};
 		EABE80EC53F9F44344D42E0D /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -396,7 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C8B404CAF22EE261174908D /* Interface.swift in Sources */,
+				81D768F0E0759605A8B4184C /* OnboardingFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +413,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				137CC25BE8C9FEE382A3C96C /* Sources.swift in Sources */,
+				B36D7879428BD713F5B1BBE6 /* OnboardingComponent.swift in Sources */,
+				5DD30657346860FD2470AE10 /* OnboardingView.swift in Sources */,
+				A6307DF4B79E38B47720F78A /* OnboardingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
