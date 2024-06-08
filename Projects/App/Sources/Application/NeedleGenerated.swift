@@ -7,6 +7,8 @@ import OnboardingFeature
 import OnboardingFeatureInterface
 import RootFeature
 import RootFeatureInterface
+import SearchFeature
+import SearchFeatureInterface
 import SplashFeature
 import SplashFeatureInterface
 import SwiftUI
@@ -78,9 +80,23 @@ private class RootDependency3944cc797a4a88956fb5Provider: RootDependency {
 private func factory264bfc4d4cb6b0629b40f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
     return RootDependency3944cc797a4a88956fb5Provider(appComponent: parent1(component) as! AppComponent)
 }
+private class SearchDependencya86903a2c751a4f762e8Provider: SearchDependency {
+
+
+    init() {
+
+    }
+}
+/// ^->AppComponent->SearchComponent
+private func factorye3d049458b2ccbbcb3b6e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return SearchDependencya86903a2c751a4f762e8Provider()
+}
 private class TabDependencyfd2d4bddc12c5633d5d4Provider: TabDependency {
     var mainFactory: any MainFactory {
         return appComponent.mainFactory
+    }
+    var searchFactory: any SearchFactory {
+        return appComponent.searchFactory
     }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
@@ -100,6 +116,7 @@ extension AppComponent: Registration {
         localTable["splashFactory-any SplashFactory"] = { [unowned self] in self.splashFactory as Any }
         localTable["tabFactory-any TabFactory"] = { [unowned self] in self.tabFactory as Any }
         localTable["mainFactory-any MainFactory"] = { [unowned self] in self.mainFactory as Any }
+        localTable["searchFactory-any SearchFactory"] = { [unowned self] in self.searchFactory as Any }
     }
 }
 extension SplashComponent: Registration {
@@ -124,9 +141,15 @@ extension RootComponent: Registration {
         keyPathToName[\RootDependency.tabFactory] = "tabFactory-any TabFactory"
     }
 }
+extension SearchComponent: Registration {
+    public func registerItems() {
+
+    }
+}
 extension TabComponent: Registration {
     public func registerItems() {
         keyPathToName[\TabDependency.mainFactory] = "mainFactory-any MainFactory"
+        keyPathToName[\TabDependency.searchFactory] = "searchFactory-any SearchFactory"
     }
 }
 
@@ -150,6 +173,7 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
     registerProviderFactory("^->AppComponent->OnboardingComponent", factory88dc13cc29c5719e2b01e3b0c44298fc1c149afb)
     registerProviderFactory("^->AppComponent->MainComponent", factoryc9274e46e78e70f29c54e3b0c44298fc1c149afb)
     registerProviderFactory("^->AppComponent->RootComponent", factory264bfc4d4cb6b0629b40f47b58f8f304c97af4d5)
+    registerProviderFactory("^->AppComponent->SearchComponent", factorye3d049458b2ccbbcb3b6e3b0c44298fc1c149afb)
     registerProviderFactory("^->AppComponent->TabComponent", factory2f3e96c21b4294db69d7f47b58f8f304c97af4d5)
 }
 #endif

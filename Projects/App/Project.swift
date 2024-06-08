@@ -31,7 +31,8 @@ let targets: [Target] = [
             .feature(target: .MainFeature),
             .feature(target: .SplashFeature),
             .feature(target: .OnboardingFeature),
-            .feature(target: .TabFeature)
+            .feature(target: .TabFeature),
+            .feature(target: .SearchFeature)
         ],
         settings: .settings(base: env.baseSetting)
     )

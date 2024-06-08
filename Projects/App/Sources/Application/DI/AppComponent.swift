@@ -10,6 +10,8 @@ import TabFeatureInterface
 import TabFeature
 import MainFeatureInterface
 import MainFeature
+import SearchFeatureInterface
+import SearchFeature
 
 public final class AppComponent: BootstrapComponent {
 
@@ -38,5 +40,9 @@ public extension AppComponent {
 
     var mainFactory: any MainFactory {
         MainComponent(parent: self)
+    }
+
+    var searchFactory: any SearchFactory {
+        SearchComponent(parent: self)
     }
 }

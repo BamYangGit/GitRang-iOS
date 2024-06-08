@@ -8,6 +8,8 @@ let project = Project.module(
         .interface(module: .feature(.TabFeature)),
         .implements(module: .feature(.TabFeature), dependencies: [
             .feature(target: .BaseFeature),
+            .feature(target: .TabFeature, type: .interface),
+            .feature(target: .MainFeature, type: .interface),
             .feature(target: .TabFeature, type: .interface)
         ]),
         .tests(module: .feature(.TabFeature), dependencies: [
