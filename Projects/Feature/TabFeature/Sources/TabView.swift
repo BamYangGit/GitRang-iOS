@@ -2,6 +2,7 @@ import DesignSystem
 import SwiftUI
 import BaseFeature
 import MainFeatureInterface
+import SearchFeatureInterface
 
 struct TabView: View {
     @State var selection: TabFlow = .main
@@ -17,18 +18,18 @@ struct TabView: View {
     // swiftlint: enable large_tuple
 
     private let mainFactory: any MainFactory
-//    private let bookmarkListFactory: any BookmarkListFactory
+    private let searchFactory: any SearchFactory
 //    private let myPageFactory: any MyPageFactory
 //    private let menuFactory: any MenuFactory
 
     init(
-        mainFactory: any MainFactory
-//        bookmarkListFactory: any BookmarkListFactory,
+        mainFactory: any MainFactory,
+        searchFactory: any SearchFactory
 //        myPageFactory: any MyPageFactory,
 //        menuFactory: any MenuFactory
     ) {
         self.mainFactory = mainFactory
-//        self.bookmarkListFactory = bookmarkListFactory
+        self.searchFactory = searchFactory
 //        self.myPageFactory = myPageFactory
 //        self.menuFactory = menuFactory
     }
@@ -41,7 +42,7 @@ struct TabView: View {
                     .tag(TabFlow.main)
                     .accentColor(.GrayScale.gray400)
 
-                EmptyView()
+                searchFactory.makeView()
                     .toNavigationView()
                     .eraseToAnyView()
                     .tag(TabFlow.search)
