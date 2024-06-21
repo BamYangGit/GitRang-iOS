@@ -24,24 +24,22 @@ struct RootView: View {
     }
 
     var body: some View {
-        NavigationView {
-            ZStack {
-                switch appState.sceneFlow {
-                case .onboarding:
-                    onboardingFactory.makeView().eraseToAnyView()
-                        .environmentObject(appState)
+        ZStack {
+            switch appState.sceneFlow {
+            case .onboarding:
+                onboardingFactory.makeView().eraseToAnyView()
+                    .environmentObject(appState)
 
-                case .main:
-                    tabFactory.makeView().eraseToAnyView()
-                        .environmentObject(appState)
+            case .main:
+                tabFactory.makeView().eraseToAnyView()
+                    .environmentObject(appState)
 
-                case .splash:
-                    splashFactory.makeView().eraseToAnyView()
-                        .environmentObject(appState)
-                }
+            case .splash:
+                splashFactory.makeView().eraseToAnyView()
+                    .environmentObject(appState)
             }
-            .animation(.easeInOut, value: appState.sceneFlow)
-            .transition(.opacity.animation(.easeInOut))
         }
+        .animation(.easeInOut, value: appState.sceneFlow)
+        .transition(.opacity.animation(.easeInOut))
     }
 }
