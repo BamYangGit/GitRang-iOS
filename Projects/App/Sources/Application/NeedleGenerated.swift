@@ -1,5 +1,9 @@
 
 
+import GroupDetailFeature
+import GroupDetailFeatureInterface
+import GroupFeature
+import GroupFeatureInterface
 import MainFeature
 import MainFeatureInterface
 import NeedleFoundation
@@ -28,6 +32,19 @@ private func parent1(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Sc
 
 #if !NEEDLE_DYNAMIC
 
+private class GroupDependencyb81caecbc3e55b3b6fd1Provider: GroupDependency {
+    var groupDetailFactory: any GroupDetailFactory {
+        return appComponent.groupDetailFactory
+    }
+    private let appComponent: AppComponent
+    init(appComponent: AppComponent) {
+        self.appComponent = appComponent
+    }
+}
+/// ^->AppComponent->GroupComponent
+private func factory8df0e13aa25ecdf90fdef47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return GroupDependencyb81caecbc3e55b3b6fd1Provider(appComponent: parent1(component) as! AppComponent)
+}
 private class SplashDependencye0cb7136f2ec3edfd60aProvider: SplashDependency {
 
 
@@ -81,15 +98,28 @@ private func factory264bfc4d4cb6b0629b40f47b58f8f304c97af4d5(_ component: Needle
     return RootDependency3944cc797a4a88956fb5Provider(appComponent: parent1(component) as! AppComponent)
 }
 private class SearchDependencya86903a2c751a4f762e8Provider: SearchDependency {
+    var groupDetailFactory: any GroupDetailFactory {
+        return appComponent.groupDetailFactory
+    }
+    private let appComponent: AppComponent
+    init(appComponent: AppComponent) {
+        self.appComponent = appComponent
+    }
+}
+/// ^->AppComponent->SearchComponent
+private func factorye3d049458b2ccbbcb3b6f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return SearchDependencya86903a2c751a4f762e8Provider(appComponent: parent1(component) as! AppComponent)
+}
+private class GroupDetailDependency7149c71ed78f233ae64cProvider: GroupDetailDependency {
 
 
     init() {
 
     }
 }
-/// ^->AppComponent->SearchComponent
-private func factorye3d049458b2ccbbcb3b6e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
-    return SearchDependencya86903a2c751a4f762e8Provider()
+/// ^->AppComponent->GroupDetailComponent
+private func factoryc59f986faef518e90750e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return GroupDetailDependency7149c71ed78f233ae64cProvider()
 }
 private class TabDependencyfd2d4bddc12c5633d5d4Provider: TabDependency {
     var mainFactory: any MainFactory {
@@ -97,6 +127,9 @@ private class TabDependencyfd2d4bddc12c5633d5d4Provider: TabDependency {
     }
     var searchFactory: any SearchFactory {
         return appComponent.searchFactory
+    }
+    var groupFactory: any GroupFactory {
+        return appComponent.groupFactory
     }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
@@ -117,6 +150,13 @@ extension AppComponent: Registration {
         localTable["tabFactory-any TabFactory"] = { [unowned self] in self.tabFactory as Any }
         localTable["mainFactory-any MainFactory"] = { [unowned self] in self.mainFactory as Any }
         localTable["searchFactory-any SearchFactory"] = { [unowned self] in self.searchFactory as Any }
+        localTable["groupFactory-any GroupFactory"] = { [unowned self] in self.groupFactory as Any }
+        localTable["groupDetailFactory-any GroupDetailFactory"] = { [unowned self] in self.groupDetailFactory as Any }
+    }
+}
+extension GroupComponent: Registration {
+    public func registerItems() {
+        keyPathToName[\GroupDependency.groupDetailFactory] = "groupDetailFactory-any GroupDetailFactory"
     }
 }
 extension SplashComponent: Registration {
@@ -143,6 +183,11 @@ extension RootComponent: Registration {
 }
 extension SearchComponent: Registration {
     public func registerItems() {
+        keyPathToName[\SearchDependency.groupDetailFactory] = "groupDetailFactory-any GroupDetailFactory"
+    }
+}
+extension GroupDetailComponent: Registration {
+    public func registerItems() {
 
     }
 }
@@ -150,6 +195,7 @@ extension TabComponent: Registration {
     public func registerItems() {
         keyPathToName[\TabDependency.mainFactory] = "mainFactory-any MainFactory"
         keyPathToName[\TabDependency.searchFactory] = "searchFactory-any SearchFactory"
+        keyPathToName[\TabDependency.groupFactory] = "groupFactory-any GroupFactory"
     }
 }
 
@@ -169,11 +215,13 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
 
 @inline(never) private func register1() {
     registerProviderFactory("^->AppComponent", factoryEmptyDependencyProvider)
+    registerProviderFactory("^->AppComponent->GroupComponent", factory8df0e13aa25ecdf90fdef47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->SplashComponent", factoryace9f05f51d68f4c0677e3b0c44298fc1c149afb)
     registerProviderFactory("^->AppComponent->OnboardingComponent", factory88dc13cc29c5719e2b01e3b0c44298fc1c149afb)
     registerProviderFactory("^->AppComponent->MainComponent", factoryc9274e46e78e70f29c54e3b0c44298fc1c149afb)
     registerProviderFactory("^->AppComponent->RootComponent", factory264bfc4d4cb6b0629b40f47b58f8f304c97af4d5)
-    registerProviderFactory("^->AppComponent->SearchComponent", factorye3d049458b2ccbbcb3b6e3b0c44298fc1c149afb)
+    registerProviderFactory("^->AppComponent->SearchComponent", factorye3d049458b2ccbbcb3b6f47b58f8f304c97af4d5)
+    registerProviderFactory("^->AppComponent->GroupDetailComponent", factoryc59f986faef518e90750e3b0c44298fc1c149afb)
     registerProviderFactory("^->AppComponent->TabComponent", factory2f3e96c21b4294db69d7f47b58f8f304c97af4d5)
 }
 #endif

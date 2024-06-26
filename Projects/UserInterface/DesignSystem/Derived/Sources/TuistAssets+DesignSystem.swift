@@ -20,6 +20,11 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum DesignSystemAsset {
+  public enum Crown {
+  public static let first = DesignSystemColors(name: "First")
+    public static let second = DesignSystemColors(name: "Second")
+    public static let thrid = DesignSystemColors(name: "Thrid")
+  }
   public enum GrayScale {
   public static let grayScale100 = DesignSystemColors(name: "GrayScale 100")
     public static let grayScale200 = DesignSystemColors(name: "GrayScale 200")
@@ -30,7 +35,8 @@ public enum DesignSystemAsset {
     public static let grayScale700 = DesignSystemColors(name: "GrayScale 700")
   }
   public enum Images {
-  public static let github = DesignSystemImages(name: "Github")
+  public static let crown = DesignSystemImages(name: "Crown")
+    public static let github = DesignSystemImages(name: "Github")
     public static let logo = DesignSystemImages(name: "Logo")
     public static let navigationLogo = DesignSystemImages(name: "NavigationLogo")
     public static let xmark = DesignSystemImages(name: "Xmark")

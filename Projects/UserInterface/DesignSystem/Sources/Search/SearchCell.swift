@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct SearchCell: View {
-    private let title: String
-    private let name: String
-    private let currentCount: Int
-    private let maxCount: Int
+public struct SearchModel: Equatable, Hashable {
+    public let title: String
+    public let name: String
+    public let currentCount: Int
+    public let maxCount: Int
 
     public init(title: String, name: String, currentCount: Int, maxCount: Int) {
         self.title = title
@@ -12,19 +12,27 @@ public struct SearchCell: View {
         self.currentCount = currentCount
         self.maxCount = maxCount
     }
+}
+
+public struct SearchCell: View {
+    private let searchModel: SearchModel
+
+    public init(searchModel: SearchModel) {
+        self.searchModel = searchModel
+    }
 
     public var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(title)
+            Text(searchModel.title)
                 .gitRankFont(.body, color: .GrayScale.gray700)
 
             HStack(alignment: .bottom) {
-                Text(title)
+                Text(searchModel.name)
                     .gitRankFont(.description, color: .GrayScale.gray700)
 
                 Spacer()
 
-                Text("\(currentCount)/\(maxCount)")
+                Text("\(searchModel.currentCount)/\(searchModel.maxCount)")
                     .gitRankFont(.caption, color: .GrayScale.gray700)
             }
         }

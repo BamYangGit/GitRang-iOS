@@ -12,6 +12,10 @@ import MainFeatureInterface
 import MainFeature
 import SearchFeatureInterface
 import SearchFeature
+import GroupFeature
+import GroupFeatureInterface
+import GroupDetailFeatureInterface
+import GroupDetailFeature
 
 public final class AppComponent: BootstrapComponent {
 
@@ -44,5 +48,13 @@ public extension AppComponent {
 
     var searchFactory: any SearchFactory {
         SearchComponent(parent: self)
+    }
+
+    var groupFactory: any GroupFactory {
+        GroupComponent(parent: self)
+    }
+
+    var groupDetailFactory: any GroupDetailFactory {
+        GroupDetailComponent(parent: self)
     }
 }

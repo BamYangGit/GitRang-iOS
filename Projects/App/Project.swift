@@ -32,7 +32,9 @@ let targets: [Target] = [
             .feature(target: .SplashFeature),
             .feature(target: .OnboardingFeature),
             .feature(target: .TabFeature),
-            .feature(target: .SearchFeature)
+            .feature(target: .SearchFeature),
+            .feature(target: .GroupFeature),
+            .feature(target: .GroupDetailFeature)
         ],
         settings: .settings(base: env.baseSetting)
     )

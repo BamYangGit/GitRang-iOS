@@ -26,25 +26,32 @@ struct MainView: View {
                 .padding(.horizontal, 20)
                 .padding(.vertical, 8)
 
-            Text("HongSJae")
+            Text(viewModel.entity?.accountId ?? "")
                 .gitRankFont(.pageTitle, color: .GrayScale.gray700)
                 .padding(.horizontal, 24)
                 .padding(.vertical, 8)
 
             HStack(alignment: .top, spacing: 16) {
-                Circle()
-                    .fill(.gray)
-                    .frame(width: 80, height: 80)
+                AsyncImage(url: .init(string: viewModel.entity?.imageUrl ?? "")) { image in
+                    image
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    Circle()
+                        .fill(.gray)
+                        .frame(width: 80, height: 80)
+                }
 
                 VStack(alignment: .leading, spacing: 8) {
                     Text(verbatim: "gtw030488@gmail.com")
                         .gitRankFont(.description, color: .GrayScale.gray700)
 
                     VStack(alignment: .leading, spacing: 0) {
-                        Text("팔로잉 0")
+                        Text("팔로잉 \(viewModel.entity?.followingCount ?? 0)")
                             .gitRankFont(.caption, color: .GrayScale.gray700)
 
-                        Text("팔로워 0")
+                        Text("팔로워 \(viewModel.entity?.followerCount ?? 0)")
                             .gitRankFont(.caption, color: .GrayScale.gray700)
                     }
                 }
@@ -53,14 +60,14 @@ struct MainView: View {
             .padding(.vertical, 16)
 
             HStack(spacing: 10) {
-                commitBox("Today Commit", count: 13)
+                commitBox("Today Commit", count: viewModel.entity?.todayCommit ?? 0)
 
-                commitBox("Last Commit", count: 13)
+                commitBox("All Commit", count: viewModel.entity?.currentTotalCommit ?? 0)
             }
             .padding(.vertical, 8)
             .padding(.horizontal, 21)
 
-            commitGoalBox(currentCommit: 4, commitGoal: 10)
+            commitGoalBox(currentCommit: viewModel.entity?.todayCommit ?? 0, commitGoal: viewModel.entity?.targetCommit ?? 1)
                 .padding(.vertical, 8)
                 .padding(.horizontal, 21)
 
@@ -81,6 +88,9 @@ struct MainView: View {
             Spacer()
         }
         .navigationBarHidden(true)
+        .onAppear {
+            viewModel.getData()
+        }
     }
 
     @ViewBuilder
@@ -104,6 +114,11 @@ struct MainView: View {
 
     @ViewBuilder
     func commitGoalBox(currentCommit: Int, commitGoal: Int) -> some View {
+        var width: CGFloat {
+            if commitGoal <= 0 { return 1  }
+            if currentCommit > commitGoal { return 1 }
+            return CGFloat(currentCommit) / CGFloat(commitGoal)
+        }
         VStack(alignment: .leading, spacing: 0) {
             HStack {
                 Text("Commit Goal")
@@ -120,7 +135,7 @@ struct MainView: View {
             GeometryReader { proxy in
                 Rectangle()
                     .fill(Color.GrayScale.gray500)
-                    .frame(maxWidth: (proxy.size.width - 20) * CGFloat(currentCommit) / CGFloat(commitGoal))
+                    .frame(maxWidth: (proxy.size.width - 20) * width)
                     .cornerRadius(4)
                     .padding(10)
             }

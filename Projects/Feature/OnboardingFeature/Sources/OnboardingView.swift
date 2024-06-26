@@ -21,17 +21,21 @@ struct OnboardingView: View {
 
             Spacer()
 
-            githubLoginButton {
-                appState.sceneFlow = .main
-            }
+            githubLoginButton()
             .padding(.vertical, 8)
             .padding(.horizontal, 24)
+        }
+        .onOpenURL { url in
+            let code = url.absoluteString.components(separatedBy: "code=").last ?? ""
+            viewModel.login(code: code) {
+                self.appState.sceneFlow = .main
+            }
         }
     }
 
     @ViewBuilder
-    func githubLoginButton(_ action: @escaping () -> Void) -> some View {
-        Button(action: action) {
+    func githubLoginButton() -> some View {
+        Link(destination: .init(string: "https://github.com/login/oauth/authorize?client_id=Ov23ctLekFLZtR4WQk1A")!) {
             HStack(spacing: 8) {
                 GitRankImage(.github)
                     .frame(width: 24, height: 24)

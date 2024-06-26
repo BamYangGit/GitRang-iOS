@@ -7,9 +7,6 @@ let project = Project.module(
     targets: [
         .implements(module: .domain(.BaseDomain), dependencies: [
             .shared(target: .GlobalThirdPartyLibrary)
-        ]),
-        .tests(module: .domain(.BaseDomain), dependencies: [
-            .domain(target: .BaseDomain, type: .interface)
         ])
     ]
 )

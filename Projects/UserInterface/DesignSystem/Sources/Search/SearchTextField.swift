@@ -16,7 +16,6 @@ public struct SearchTextField: View {
                 Color.GrayScale.gray400
                     .frame(maxWidth: .infinity, maxHeight: 1)
             }
-            .frame(height: 32)
 
             GitRankImage(.xmark)
                 .frame(width: 24, height: 24)
